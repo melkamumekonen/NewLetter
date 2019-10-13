@@ -41,7 +41,7 @@ app.post("/", (req, res) => {
         url: baseUrl,
         method: "POST",
         headers: {
-            "Authorization": "michael1 "+config.api()
+            "Authorization": config.user() + " " +config.api()
         },
         body: jsonData
     }
